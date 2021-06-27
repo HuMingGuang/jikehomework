@@ -1,0 +1,179 @@
+  Last modified 2021-6-27; size 1163 bytes
+  MD5 checksum 309265fecab622a62499c30867f151e2
+  Compiled from "Hello.java"
+public class Hello
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #21.#46        // java/lang/Object."<init>":()V
+   #2 = Double             2.0d
+   #4 = Long               3l
+   #6 = String             #47            //
+   #7 = Methodref          #48.#49        // java/lang/String.length:()I
+   #8 = Fieldref           #50.#51        // java/lang/System.out:Ljava/io/PrintStream;
+   #9 = Class              #52            // java/lang/StringBuilder
+  #10 = Methodref          #9.#46         // java/lang/StringBuilder."<init>":()V
+  #11 = String             #53            // 错误用法: num2 + num3 =
+  #12 = Methodref          #9.#54         // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #13 = Methodref          #9.#55         // java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;
+  #14 = Methodref          #9.#56         // java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+  #15 = Methodref          #9.#57         // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #16 = Methodref          #58.#59        // java/io/PrintStream.println:(Ljava/lang/String;)V
+  #17 = String             #60            // 四则运算: num1 * num4 =
+  #18 = Methodref          #58.#61        // java/io/PrintStream.print:(Ljava/lang/String;)V
+  #19 = Methodref          #58.#62        // java/io/PrintStream.println:(I)V
+  #20 = Class              #63            // Hello
+  #21 = Class              #64            // java/lang/Object
+  #22 = Utf8               <init>
+  #23 = Utf8               ()V
+  #24 = Utf8               Code
+  #25 = Utf8               LineNumberTable
+  #26 = Utf8               LocalVariableTable
+  #27 = Utf8               this
+  #28 = Utf8               LHello;
+  #29 = Utf8               main
+  #30 = Utf8               ([Ljava/lang/String;)V
+  #31 = Utf8               i
+  #32 = Utf8               I
+  #33 = Utf8               args
+  #34 = Utf8               [Ljava/lang/String;
+  #35 = Utf8               num1
+  #36 = Utf8               num2
+  #37 = Utf8               D
+  #38 = Utf8               num3
+  #39 = Utf8               J
+  #40 = Utf8               num4
+  #41 = Utf8               B
+  #42 = Utf8               StackMapTable
+  #43 = Class              #34            // "[Ljava/lang/String;"
+  #44 = Utf8               SourceFile
+  #45 = Utf8               Hello.java
+  #46 = NameAndType        #22:#23        // "<init>":()V
+  #47 = Utf8
+  #48 = Class              #65            // java/lang/String
+  #49 = NameAndType        #66:#67        // length:()I
+  #50 = Class              #68            // java/lang/System
+  #51 = NameAndType        #69:#70        // out:Ljava/io/PrintStream;
+  #52 = Utf8               java/lang/StringBuilder
+  #53 = Utf8               错误用法: num2 + num3 =
+  #54 = NameAndType        #71:#72        // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #55 = NameAndType        #71:#73        // append:(D)Ljava/lang/StringBuilder;
+  #56 = NameAndType        #71:#74        // append:(J)Ljava/lang/StringBuilder;
+  #57 = NameAndType        #75:#76        // toString:()Ljava/lang/String;
+  #58 = Class              #77            // java/io/PrintStream
+  #59 = NameAndType        #78:#79        // println:(Ljava/lang/String;)V
+  #60 = Utf8               四则运算: num1 * num4 =
+  #61 = NameAndType        #80:#79        // print:(Ljava/lang/String;)V
+  #62 = NameAndType        #78:#81        // println:(I)V
+  #63 = Utf8               Hello
+  #64 = Utf8               java/lang/Object
+  #65 = Utf8               java/lang/String
+  #66 = Utf8               length
+  #67 = Utf8               ()I
+  #68 = Utf8               java/lang/System
+  #69 = Utf8               out
+  #70 = Utf8               Ljava/io/PrintStream;
+  #71 = Utf8               append
+  #72 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #73 = Utf8               (D)Ljava/lang/StringBuilder;
+  #74 = Utf8               (J)Ljava/lang/StringBuilder;
+  #75 = Utf8               toString
+  #76 = Utf8               ()Ljava/lang/String;
+  #77 = Utf8               java/io/PrintStream
+  #78 = Utf8               println
+  #79 = Utf8               (Ljava/lang/String;)V
+  #80 = Utf8               print
+  #81 = Utf8               (I)V
+{
+  public Hello();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LHello;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=8, args_size=1
+         0: iconst_1
+         1: istore_1
+         2: ldc2_w        #2                  // double 2.0d
+         5: dstore_2
+         6: ldc2_w        #4                  // long 3l
+         9: lstore        4
+        11: iconst_4
+        12: istore        6
+        14: ldc           #6                  // String
+        16: invokevirtual #7                  // Method java/lang/String.length:()I
+        19: bipush        10
+        21: if_icmpge     54
+        24: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        27: new           #9                  // class java/lang/StringBuilder
+        30: dup
+        31: invokespecial #10                 // Method java/lang/StringBuilder."<init>":()V
+        34: ldc           #11                 // String 错误用法: num2 + num3 =
+        36: invokevirtual #12                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        39: dload_2
+        40: invokevirtual #13                 // Method java/lang/StringBuilder.append:(D)Ljava/lang/StringBuilder;
+        43: lload         4
+        45: invokevirtual #14                 // Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+        48: invokevirtual #15                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        51: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        54: iconst_0
+        55: istore        7
+        57: iload         7
+        59: iload_1
+        60: if_icmpge     87
+        63: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        66: ldc           #17                 // String 四则运算: num1 * num4 =
+        68: invokevirtual #18                 // Method java/io/PrintStream.print:(Ljava/lang/String;)V
+        71: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        74: iload_1
+        75: iload         6
+        77: imul
+        78: invokevirtual #19                 // Method java/io/PrintStream.println:(I)V
+        81: iinc          7, 1
+        84: goto          57
+        87: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 2
+        line 5: 6
+        line 6: 11
+        line 7: 14
+        line 9: 24
+        line 11: 54
+        line 13: 63
+        line 14: 71
+        line 11: 81
+        line 16: 87
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           57      30     7     i   I
+            0      88     0  args   [Ljava/lang/String;
+            2      86     1  num1   I
+            6      82     2  num2   D
+           11      77     4  num3   J
+           14      74     6  num4   B
+      StackMapTable: number_of_entries = 3
+        frame_type = 255 /* full_frame */
+          offset_delta = 54
+          locals = [ class "[Ljava/lang/String;", int, double, long, int ]
+          stack = []
+        frame_type = 252 /* append */
+          offset_delta = 2
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 29
+}
+SourceFile: "Hello.java"
