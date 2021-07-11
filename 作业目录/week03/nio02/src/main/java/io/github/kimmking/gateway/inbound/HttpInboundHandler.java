@@ -14,6 +14,7 @@ import io.netty.handler.codec.http.HttpUtil;
 import io.netty.util.ReferenceCountUtil;
 
 import java.util.Collections;
+import java.util.List;
 
 import static io.netty.handler.codec.http.HttpResponseStatus.NO_CONTENT;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
@@ -21,10 +22,12 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
     HttpRequestFilter filter;
     HttpRouterServer httpRouterServer;
+    private List<String> proxyServers;
 
-    public HttpInboundHandler() {
+    public HttpInboundHandler(List<String> proxyServers) {
         filter = ProxyBizFilter.newInstance();
         httpRouterServer = HttpRouterServer.newInstance();
+        this.proxyServers = proxyServers;
     }
 
     @Override
@@ -45,7 +48,7 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
             // 输入过滤url
             filter.filter(fullRequest, ctx);
             // 路由到不同的服务器
-            String backendUrl = httpRouterServer.route(Collections.singletonList(fullRequest.uri()));
+            String backendUrl = httpRouterServer.route(proxyServers);
             HttpOutboundHandler handler = new HttpOutboundHandler(backendUrl);
             // 调用后端服务，并返回结果给调用端
             handler.handle(fullRequest, ctx);
