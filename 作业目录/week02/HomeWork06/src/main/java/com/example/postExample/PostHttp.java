@@ -15,7 +15,7 @@ public class PostHttp {
         helloExample.setContent("hello world");
         helloExample.setName("sunshine");
         try {
-            String response = post("http://127.0.0.1:8801", com.alibaba.fastjson.JSON.toJSONString(helloExample));
+            String response = post("http://127.0.0.1:8888/hello", com.alibaba.fastjson.JSON.toJSONString(helloExample));
             System.out.println("response result:" + response);
         } catch (IOException e) {
             e.printStackTrace();
