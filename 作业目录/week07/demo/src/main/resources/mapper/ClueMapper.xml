@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ClueMapper">
+    <insert id="insert">
+        insert into imp_clue_tbl (cust_uid,cust_nm,cmt1) values(#{custUid},#{custNm},#{cmt1})
+    </insert>
+    <select id="selectAll" resultType="com.example.demo.entity.Clue">
+        select * from imp_clue_tbl
+    </select>
+    <delete id="delete">
+        delete from imp_clue_tbl where cust_nm = #{custNm}
+    </delete>
+    <update id="save">
+        update imp_clue_tbl set cust_uid=#{custUid},cust_nm=#{custNm},cmt1=#{cmt1} where rcd_id = #{rcdId}
+    </update>
+</mapper>
